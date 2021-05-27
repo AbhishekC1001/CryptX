@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303443"
+    android:orientation="vertical"
+    tools:context=".predictions">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/priv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/dollar" />
+
+        <TextView
+            android:id="@+id/prtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/priv"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="BTC"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:textSize="80dp" />
+    </RelativeLayout>
+
+    <Button
+        android:onClick="showpopup"
+        android:id="@+id/graphbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/graphbshape"
+        android:text="Predictions of next 30 days[Click ME]"
+        android:textSize="15dp"
+
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#7FF814">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Price"
+                android:textSize="32dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#7FF814">
+
+                    <TextView
+                        android:id="@+id/trd1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/trd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/trd3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#7FF814">
+
+                    <TextView
+                        android:id="@+id/trd14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:textSize="20dp">
+
+                    <TextView
+                        android:id="@+id/trd30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trp30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Price"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </TableLayout>
+</LinearLayout>

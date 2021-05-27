@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="900px"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Graphical Analysis"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphv"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+    <Button
+        android:id="@+id/closebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        ></Button>
+</LinearLayout>
