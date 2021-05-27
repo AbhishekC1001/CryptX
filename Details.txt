@@ -1,0 +1,4 @@
+Datafetched from CoinmarketCap.com 
+and coinapi.io
+
+Read from Kris Naik StockPrice Prediction
